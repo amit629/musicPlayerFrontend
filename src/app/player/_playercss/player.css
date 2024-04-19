@@ -1,0 +1,40 @@
+.TrackNameShadow{
+    text-shadow: 2px 0 0px #800040, 3px 2px 0px rgba(77,0,38,0.5), 3px 0 3px #FF002B, 5px 0 3px #800015, 2px 2px 2px rgba(206,89,55,0);}
+
+    @keyframes marquee-scroll-left {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-190%);
+        }
+      }
+      
+      .scrolling-text-container {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 80%; /* Ensure container takes full width */
+      }
+      
+      .scrolling-text-inner {
+        display: inline-block;
+        animation: marquee-scroll-left var(--marquee-speed, 10s) linear infinite;
+      }
+      
+      .scrolling-text {
+        display: inline-block;
+      }
+      
+      ::-webkit-scrollbar{
+        display: none;
+      }
+      
+      .calculated-height{
+        height: calc(100vh - 98px) !important;
+      }
+      .calculated-height2{
+        height: calc(100vh - 180px) !important;
+      }
+      .calculated-height3{
+        height: calc(100vh - 100px) !important;
+      }

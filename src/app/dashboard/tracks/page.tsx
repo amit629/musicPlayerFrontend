@@ -1,0 +1,13 @@
+"use client"
+import { useRouter } from 'next/navigation';
+import React from 'react'
+
+export default function page() {
+  return (
+    <>
+        <div>
+            <h1>hello</h1>
+        </div>
+    </>
+  )
+}

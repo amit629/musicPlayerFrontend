@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  body{
+    overflow: hidden;
+  }
+}
+
+.authBackProp{
+  filter: blur(8px);
+}
+.inputRangeBall{
+  border-top-left-radius:10px;
+  border-bottom-left-radius: 10px;
+}
+/* .inputRangeBall::after{
+  content:'df';
+  position: relative;
+  top: 0;
+  color:transparent;
+  width: 30px;
+  height: 100%;
+  border-radius:50%;
+  border:1px solid black;
+  background-color: green;
+} */
