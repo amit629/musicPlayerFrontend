@@ -13,7 +13,7 @@ interface trackAttributesProps{
 
 export async function GET(req:NextRequest) {
     // return new Response(JSON.stringify({hello:'world'}))
-    let tracks=await TrackModal.find({});
+    let tracks=await TrackModal.find({}).limit(5);
     return NextResponse.json({
         tracksData:tracks
     });

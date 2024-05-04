@@ -3,7 +3,7 @@
 
     @keyframes marquee-scroll-left {
         0% {
-          transform: translateX(100%);
+          transform: translateX(10%);
         }
         100% {
           transform: translateX(-190%);
@@ -25,16 +25,47 @@
         display: inline-block;
       }
       
-      ::-webkit-scrollbar{
+      /* ::-webkit-scrollbar{
         display: none;
       }
-      
+       */
+       /* ::-webkit-scrollbar{
+        width: 10px;
+        background-color: #121212;
+       } */
+
+       ::-webkit-scrollbar {
+        width: 8px !important;
+        
+      }
+       
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        
+      }
+       
+      ::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        border-radius: 10px;
+        outline: 1px solid slategrey;
+      }
       .calculated-height{
         height: calc(100vh - 98px) !important;
       }
       .calculated-height2{
-        height: calc(100vh - 180px) !important;
+        height: calc(100vh - 195px) !important;
       }
       .calculated-height3{
         height: calc(100vh - 100px) !important;
+      }
+      div.vertical-line{
+        display: none;
+        width: 1px; /* Line width */
+        background-color: rgb(255, 255, 255); /* Line color */
+        height: 50%; /* Override in-line if you want specific height. */
+          z-index: 100;
+      }
+      div.vertical-line-container:hover .vertical-line{
+        display: block;
+        
       }

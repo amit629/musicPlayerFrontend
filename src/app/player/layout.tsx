@@ -14,7 +14,7 @@ export default function PlayerLayout({
     
     return(
         <>
-            <div className="h-screen w-screen grid grid-cols-12 bg-[#1b1a1a]" >
+            <div className="h-screen w-screen grid grid-cols-12 bg-[#000000]" >
               {children}
           </div>
         </>

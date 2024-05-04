@@ -108,23 +108,23 @@ export default function MusicPlayer({trackAttr}:any) {
 
                 <div className='h-full w-full  p-2 flex flex-row ' style={{color:'white'}}>
                     <div className='h-[100%] w-[30%] inline-flex items-center '>
-                        <img src={`${process.env.NEXT_PUBLIC_SERVER_URL}/sendImage/${trackAttr.FileImageAttributes.FileName}`} className='m-0 p-0 inline-block' alt="photo" style={{height:'100%',width:'20%'}}/>
+                        <img src={`${process.env.NEXT_PUBLIC_SERVER_URL}/sendImage/${trackAttr.FileImageAttributes.FileName}`} className='m-0 p-0 inline-block rounded-lg' alt="photo" style={{height:'100%',width:'20%',border:'1px solid white'}}/>
                         <div className='inline-flex flex-col ps-3 justify-end w-[80%]'>
                             {
                                 trackAttr.Title.length>23?(
                                     <div className="scrolling-text-container ">
                                         <div className="scrolling-text-inner w-full">
                                             <div className="scrolling-text w-full">
-                                                <div className="scrolling-text-item font-extrabold text-2xl TrackNameShadow ">{trackAttr.Title}</div>
+                                                <div className="scrolling-text-item font-extrabold text-lg TrackNameShadow ">{trackAttr.Title}</div>
                                             </div>
                                         </div>
                                     </div>
                                 ):(
-                                    <div  className="font-extrabold text-2xl TrackNameShadow text-nowrap w-[90%]" style={{scrollbarWidth:'none'}}>{trackAttr.Title}</div>
+                                    <div  className="font-extrabold text-lg TrackNameShadow text-nowrap w-[90%]" style={{scrollbarWidth:'none'}}>{trackAttr.Title}</div>
                                 )
                             }
                             {/* <marquee  className="font-extrabold text-2xl TrackNameShadow overflow-x-auto overflow-y-hidden scroll text-nowrap w-[90%]" ref={refOfScroll} style={{scrollbarWidth:'none'}}></marquee> */}
-                            <span>{trackAttr.Artist.join(' & ')}</span>
+                            <span className='text-md'>{trackAttr.Artist.join(' & ')}</span>
                         </div>
                     </div>
                     <div className=' h-[100%] w-[70%] inline-flex flex-col p-1 mt-1'>
