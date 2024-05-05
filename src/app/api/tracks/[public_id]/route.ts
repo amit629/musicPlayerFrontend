@@ -1,6 +1,9 @@
 import { getFileFromCloudinary, uploadFileToCloudianry } from "@/app/_utils/cloudnary";
 import { NextRequest, NextResponse } from "next/server";
-export const dynamic = 'force-dynamic';
+
+export const config = {
+    runtime: 'experimental-edge',
+  }
 export async function GET(req:NextRequest) {
     const name="songs/hass_abl0pz"
     const file=await getFileFromCloudinary(name)

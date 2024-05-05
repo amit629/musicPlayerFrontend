@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import User from "../../../../../mongoose/models/User";
-export const dynamic = 'force-dynamic';
+
+export const config = {
+    runtime: 'experimental-edge',
+  }
 export async function POST(req:NextRequest) {
     let data=await req.json();
     if(!data){
