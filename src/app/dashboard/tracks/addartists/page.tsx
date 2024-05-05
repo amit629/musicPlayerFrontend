@@ -54,7 +54,7 @@ const page = () => {
         <div className="bg-red-200">
             <div className="bg-green-500 relative" style={{height:'670px',width:'90%',top:"2%",left:'5%',overflowY:'auto',scrollbarWidth:'thin',padding:'10px'}}>
               {
-                  artist.length>0?(
+                  artist!=undefined && artist.length>0?(
                     artist.map((gen:any,index)=>{
                       return(
                         <div key={gen.artistId} className='m-0 p-0'>{gen.artistName}</div>
