@@ -5,7 +5,7 @@ const page = () => {
   const [genres,setGenres]=useState<string[]>([]);
   const [genInp,setGenInp]=useState('');
   let getGenre=async()=>{
-    const resp=await fetch('/api/tracks/genre',{
+    const resp=await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/tracks/genre`,{
       method:'GET',
       headers:{
         "Content-Type": "application/json",
@@ -26,7 +26,7 @@ const page = () => {
       return;
     }
     if(genInp.length>0){
-      const resp=await fetch('/api/tracks/genre',{
+      const resp=await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/tracks/genre`,{
         method:'POST',
         headers:{
           "Content-Type": "application/json",

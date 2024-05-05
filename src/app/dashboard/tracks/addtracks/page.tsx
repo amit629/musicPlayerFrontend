@@ -26,7 +26,7 @@ const page = () => {
 
 
   const getGenreFromDatabase=async()=>{
-    const resp=await fetch('/api/tracks/genre',{
+    const resp=await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/tracks/genre`,{
       method:'GET',
       headers:{
         "Content-Type": "application/json",
@@ -45,7 +45,7 @@ const page = () => {
     setGenres(sortedGen);
   }
   const getArtistsFromDatabase=async()=>{
-    const resp=await fetch('/api/tracks/artist',{
+    const resp=await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/tracks/artist`,{
       method:'GET',
       headers:{
         "Content-Type": "application/json",

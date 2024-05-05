@@ -52,6 +52,7 @@ export default function MusicPlayer({trackAttr}:any) {
     },[play])
 
     useEffect(()=>{
+        
         aud.volume=userAudio
     },[userAudio])
 
@@ -65,6 +66,7 @@ export default function MusicPlayer({trackAttr}:any) {
     useEffect(()=>{
         setWth((currTime/duration)*100);
         console.log(aud.volume)
+        aud.volume=userAudio;
         if(countUpdate==false && (currTime/duration)*100>15){
             updateCnt();
         }
@@ -139,7 +141,7 @@ export default function MusicPlayer({trackAttr}:any) {
                                 }<Image src='/fastforward.png' alt='fast forward' height={20} width={20}  className='h-[80%] w-[70px] px-2'/>
                             </div>
                         <div className='aud inline-flex justify-center items-center ps-14 '>
-                            <input type="range" max={1} min={0} step={0.05} defaultValue={userAudio} onChange={setAudioVolume}/>
+                            <input type="range" max={1} min={0} step={0.05} value={userAudio} onChange={setAudioVolume}/>
                         </div>
                         </div>
                     </div>

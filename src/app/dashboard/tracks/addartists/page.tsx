@@ -6,7 +6,7 @@ const page = () => {
   const [artist,setArtist]=useState<string[]>([]);
   const [artInp,setArtInp]=useState('');
   let getArtist=async()=>{
-    const resp=await fetch('/api/tracks/artist',{
+    const resp=await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/tracks/artist`,{
       method:'GET',
       headers:{
         "Content-Type": "application/json",
@@ -27,7 +27,7 @@ const page = () => {
       return;
     }
     if(artInp.length>0){
-      const resp=await fetch('/api/tracks/artist',{
+      const resp=await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/tracks/artist`,{
         method:'POST',
         headers:{
           "Content-Type": "application/json",

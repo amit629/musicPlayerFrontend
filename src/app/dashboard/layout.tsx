@@ -21,7 +21,7 @@ export default function DashboardLayout({
         router.push('/auth/login')
       }
       else{
-        const getStatus=await fetch('/api/auth/privlage',{
+        const getStatus=await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/auth/privlage`,{
           method:'POST',
           body:JSON.stringify({
             email:session.data?.user?.email
