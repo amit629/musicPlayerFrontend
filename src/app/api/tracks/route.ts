@@ -10,7 +10,7 @@ interface trackAttributesProps{
     releaseDate:string,
     language:string
 }
-
+export const dynamic = 'force-dynamic';
 export async function GET(req:NextRequest) {
     // return new Response(JSON.stringify({hello:'world'}))
     let tracks=await TrackModal.find({}).limit(5);
