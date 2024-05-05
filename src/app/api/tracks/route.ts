@@ -11,9 +11,7 @@ interface trackAttributesProps{
     language:string
 }
 
-export const config = {
-    runtime: 'experimental-edge',
-  }
+export const runtime = "experimental-edge";
 export async function GET(req:NextRequest) {
     // return new Response(JSON.stringify({hello:'world'}))
     let tracks=await TrackModal.find({}).limit(5);
