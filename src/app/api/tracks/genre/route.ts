@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Genre from "../../../../../mongoose/models/Genre";
 import { v4 as uuid } from "uuid";
 
-export const runtime = "experimental-edge";
+
 export async function GET(req:NextRequest) {
     let genre=await Genre.find({});
     return NextResponse.json({

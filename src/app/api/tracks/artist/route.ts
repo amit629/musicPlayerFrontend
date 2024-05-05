@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Artists from "../../../../../mongoose/models/Artists";
 import { v4 as uuid } from "uuid";
 
-export const runtime = "experimental-edge";
+
 export async function GET(req:NextRequest) {
     let ArtistData=await Artists.find({});
     return NextResponse.json({
