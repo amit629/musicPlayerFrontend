@@ -53,7 +53,7 @@ const page = () => {
         <div className="bg-red-200">
             <div className="bg-green-500 relative" style={{height:'670px',width:'90%',top:"5%",left:'5%',overflowY:'auto'}}>
               {
-                genres.length>0?(
+                genres!=undefined && genres.length>0?(
                   genres.map((gen:any,index)=>{
                     return(
                       <div key={index}>{gen.genreName}</div>
